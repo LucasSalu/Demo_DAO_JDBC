@@ -4,6 +4,7 @@ package application;
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
 import model.entities.Department;
+import model.entities.Seller;
 
 public class Program {
 	
@@ -15,6 +16,14 @@ public class Program {
 	    
 	    System.out.println("findByDepartment");
 	    sellerDao.findByDepartment(new Department(1,""));
+	    
+		System.out.println("====================findByDepartment===================");
+		
+		for (Seller c: sellerDao.findAll()) {
+			System.out.println(c.getId()+" "+c.getName());
+		}
+
+		
 	    
 	}
 
